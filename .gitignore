@@ -10,7 +10,7 @@ pip-delete-this-directory.txt
 
 # Django stuff:
 *.log
-local_settings.py
+# local_settings.py
 
 # pyenv
 .python-version
