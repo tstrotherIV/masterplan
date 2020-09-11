@@ -23,29 +23,44 @@
       type="text/css"
       media="screen"
     />
+    <link
+      rel="stylesheet"
+      href="{% static 'styles/login.css' %}"
+      type="text/css"
+      media="screen"
+    />
     {% block css %} {% endblock %}
   </head>
 
-  <body>
-      
+  <body class="body{% if request.user.is_authenticated %} whiteBgd{% endif %}">
       <div class="wrapper">
         <nav id="sidebar">
           <div class="sidebar-header">
             {% if request.user.is_authenticated %}
-            <h3>Hello, Jim</h3>
+            <h3>Hello, {{request.user.first_name}}</h3>
             {% else %}
             <h3>Welcome Guest</h3>
             {% endif %}
           </div>
           <ul class="list-unstyled components">
             <p>MasterPlan</p>
+            {% if request.user.is_authenticated %}
             <li class="active">
               <a
                 href="{% url 'masterplanapp:home' %}"
-                >HOME</a
+                >DASHBOARD</a
               >
             </li>
-            {% if request.user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'masterplanapp:logout' %}"
+                >ALL PROJECTS</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'masterplanapp:logout' %}"
+                >ARCHIVED</a
+              >
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'masterplanapp:logout' %}"
                 >LOGOUT</a
@@ -59,7 +74,11 @@
             </li>
             {% endif %}
           </ul>
+          {% if request.user.is_authenticated %}
+          <div class="genPad">Recent Projects</div>
+          {% endif %}
         </nav>
+
 
         <div id="content">
 
@@ -74,11 +93,21 @@
 
                 </div>
             </nav>
-            </div>
+            {% if request.user.is_authenticated %}
+            <nav class="">
+                <div class="">
+                    <button type="button" id="addProject" class="addBtn">
+                    </button>
+                    <h4>NEW PROJECT</h4>
+                </div>
+            </nav>
+            {% endif %}
+
+            <main class="main-content">{% block content %} 
+              {% endblock %}</main>
 
       </div>
 
-      <main class="main-content">{% block content %} {% endblock %}</main>
 
       {% block scripts %} {% endblock scripts %}
 
