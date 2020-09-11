@@ -228,3 +228,7 @@ a.article:hover {
   padding: 5px;
   text-decoration: underline;
 }
+
+.newProject {
+  display: flex;
+}
