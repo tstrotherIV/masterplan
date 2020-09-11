@@ -7,7 +7,7 @@ class Client(models.Model):
     company_phone_number =  models.CharField(max_length=100)
     contact_first_name = models.CharField(max_length=100)
     contact_last_name = models.CharField(max_length=100)
-    contact_pohone_number = models.CharField(max_length=100)
+    contact_phone_number = models.CharField(max_length=100)
     contact_email = models.CharField(max_length=100)
     
     def __str__(self):
