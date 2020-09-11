@@ -6,7 +6,8 @@ from .views import home, login, logout_user
 app_name = "masterplanapp"
 
 urlpatterns = [
-    path('login/', login, name='login'),
-    path('logout/', logout_user, name='logout'),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/login/', login, name='login'),
+    path('accounts/logout/', logout_user, name='logout'),
     path('', home, name='home'),
 ]
