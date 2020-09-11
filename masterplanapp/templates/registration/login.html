@@ -5,9 +5,11 @@
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-        <button type="submit">Login</button>
-        </form>       
+        <button class="btn btn-danger" type="submit">Login</button>
+        <br><br>
+        <h6>Sign up</h6>
+        <a class="btn btn-primary" href="{% url 'masterplanapp:register' %}">REGISTER</a>
+    </form>
     </div>
 </div>
-<script src="./login.js"></script>
 {% endblock %}
