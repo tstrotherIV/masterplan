@@ -1,7 +1,7 @@
 from django.urls import path
 from django.conf.urls import include
 from masterplanapp import views
-from .views import home, login, logout_user, register_user
+from .views import *
 
 app_name = "masterplanapp"
 
@@ -11,4 +11,5 @@ urlpatterns = [
     path('register/', register_user, name="register"),
     path('accounts/logout/', logout_user, name='logout'),
     path('', home, name='home'),
+    path('projects/', project_list, name='projects')
 ]

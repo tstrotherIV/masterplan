@@ -61,10 +61,10 @@
           <p>MasterPlan</p>
           {% if request.user.is_authenticated %}
           <li class="active">
-            <a href="{% url 'masterplanapp:home' %}">DASHBOARD</a>
+            <a href="{% url 'masterplanapp:projects' %}">DASHBOARD</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'masterplanapp:logout' %}"
+            <a class="nav-link" href="{% url 'masterplanapp:projects' %}"
               >ALL PROJECTS</a
             >
           </li>

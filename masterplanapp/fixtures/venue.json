@@ -1,0 +1,20 @@
+[
+  {
+    "model": "masterplanapp.venue",
+    "pk": 1,
+    "fields": {
+      "name": "Disney's Coronado Springs Resort Convention Center",
+      "street_address": "1000 W Buena Vista Dr",
+      "city": "Lake Buena Vista",
+      "state": "FL",
+      "zipcode": "32830",
+      "venue_phone": "407-939-1000",
+      "contact_name": "Margo",
+      "contact_email": "Lansing",
+      "contact_phone": "555-555-5555",
+      "onsite_parking_address": "1000 W Buena Vista Dr, Lake Buena Vista, FL 32830",
+      "semi_parking": "1000 W Buena Vista Dr, Lake Buena Vista, FL 32830",
+      "loading_dock": "5 semi-truck height docks"
+    }
+  }
+]

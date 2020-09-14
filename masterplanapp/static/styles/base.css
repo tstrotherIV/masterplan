@@ -232,3 +232,16 @@ a.article:hover {
 .newProject {
   display: flex;
 }
+
+.projectList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.project-width {
+  width: 40%;
+  min-width: 400px;
+  margin: 10px;
+  box-shadow: 5px 10px 10px #00000023;
+}
