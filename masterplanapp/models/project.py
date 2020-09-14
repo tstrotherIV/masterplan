@@ -9,6 +9,7 @@ class Project(models.Model):
 
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=1000)
+    location_name = models.CharField(max_length=100, default=None, blank=True, null=True)
     location_address = models.CharField(max_length=100)
     location_city = models.CharField(max_length=100)
     location_state = models.CharField(max_length=100)
@@ -25,8 +26,6 @@ class Project(models.Model):
     union =  models.ForeignKey(Union, on_delete=models.DO_NOTHING)
     houseAV = models.ForeignKey(HouseAV, on_delete=models.DO_NOTHING)
     venue = models.ForeignKey(Venue, on_delete=models.DO_NOTHING)
-    
-    
 
     def __str__(self):
         return f"{self.name}"

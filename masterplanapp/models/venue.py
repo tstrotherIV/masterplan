@@ -8,6 +8,7 @@ class Venue(models.Model):
       city = models.CharField(max_length=100)
       state = models.CharField(max_length=100)
       zipcode = models.CharField(max_length=100)
+      venue_phone = models.CharField(max_length=100, default=None, blank=True, null=True)
       contact_name = models.CharField(max_length=100)
       contact_email = models.CharField(max_length=100)
       contact_phone = models.CharField(max_length=100)

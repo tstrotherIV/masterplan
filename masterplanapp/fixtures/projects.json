@@ -1,0 +1,78 @@
+[
+  {
+    "model": "masterplanapp.project",
+    "pk": 1,
+    "fields": {
+      "name": "Dollar General Annual Conference 2021",
+      "description": "Annual conference for Employees from the Southwest region. 2 General sessions and 15 Breakout rooms",
+      "location_name": "Disney's Coronado Springs Resort Convention Center",
+      "location_address": "1000 W Buena Vista Drive",
+      "location_city": "Lake Buena Vista",
+      "location_state": "FL",
+      "location_zipcode": "32830",
+      "event_start_date": "2021-07-08",
+      "event_end_date": "2021-07-12",
+      "load_in_time": "9:00am",
+      "load_out_time": "9:00am",
+      "completed": false,
+      "deleted": false,
+      "priority": false,
+      "confirmed": true,
+      "client": 1,
+      "union": 1,
+      "houseAV": 1,
+      "venue": 1
+    }
+  },
+  {
+    "model": "masterplanapp.project",
+    "pk": 2,
+    "fields": {
+      "name": "Goodyear Mid-Year Conference 2022",
+      "description": "Mid-Year conference for top level execs. 1 General Session and 3 breakout rooms",
+      "location_name": "Disney's Yacht Club Convention Center",
+      "location_address": "1700 Epcot Resorts Blvd",
+      "location_city": "Orlando",
+      "location_state": "FL",
+      "location_zipcode": "32830",
+      "event_start_date": "2021-02-19",
+      "event_end_date": "2021-02-22",
+      "load_in_time": "7:30am",
+      "load_out_time": "11:00pm",
+      "completed": false,
+      "deleted": false,
+      "priority": true,
+      "confirmed": true,
+      "client": 1,
+      "union": 1,
+      "houseAV": 1,
+      "venue": 1
+    }
+  },
+  {
+    "model": "masterplanapp.project",
+    "pk": 3,
+    "fields": {
+      "name": "Sams Club Annual Conference 2019",
+      "description": "Annual Conference for Employees to present new products, future planning, and location announcements",
+      "location_name": "Tampa Convention Center",
+      "location_address": "333 S Franklin St",
+      "location_city": "Tampa",
+      "location_state": "FL",
+      "location_zipcode": "33602",
+      "event_start_date": "2019-06-04",
+      "event_end_date": "2019-06-07",
+      "load_in_time": "10:00am",
+      "load_out_time": "2:00pm",
+      "completed": true,
+      "deleted": false,
+      "priority": true,
+      "confirmed": true,
+      "client": 1,
+      "union": 1,
+      "houseAV": 1,
+      "venue": 1
+    }
+  }
+
+]

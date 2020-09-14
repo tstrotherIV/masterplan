@@ -1,0 +1,12 @@
+[
+  {
+    "model": "masterplanapp.union",
+    "pk": 1,
+    "fields": {
+      "name": "UNITE HERE Local 362",
+      "contact_name": "Tito Rosario",
+      "contact_email": "crosario@unitehere.org",
+      "contact_phone": "407-851-6607"
+    }
+  } 
+]

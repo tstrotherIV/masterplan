@@ -1,0 +1,12 @@
+[
+  {
+    "model": "masterplanapp.houseAV",
+    "pk": 1,
+    "fields": {
+      "name": "PSAV",
+      "contact_name": "Rachael Futo",
+      "contact_email": "rfuto@psav.com",
+      "contact_phone": "407-827-2774"
+    }
+  }
+]

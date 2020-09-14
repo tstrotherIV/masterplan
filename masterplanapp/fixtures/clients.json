@@ -1,0 +1,18 @@
+[
+  {
+    "model": "masterplanapp.client",
+    "pk": 1,
+    "fields": {
+      "name": "Dollar General",
+      "address": "1000 W Buena Vista Drive",
+      "city": "Lake Buena Vista",
+      "state": "FL",
+      "zipcode": "32830",
+      "company_phone_number": "615-855-4000",
+      "contact_first_name": "Jim",
+      "contact_last_name": "Johnson",
+      "contact_phone_number": "555-555-5555",
+      "contact_email": "jjohnson@jjohnson.com"
+    }
+  }
+]
