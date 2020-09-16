@@ -2,4 +2,15 @@ from .home import home
 from .auth.login import login
 from .auth.logout import logout_user
 from .auth.register import register_user
-from .projects import project_list
+from .projects.list import project_list
+from .projects.form import project_form
+from .projects.details import project_details
+from .clients.form import client_form
+from .clients.list import client_list
+from .clients.details import client_details
+from .venues.list import venue_list
+from .venues.form import venue_form
+from .venues.details import venue_details
+from .houseAVCompanies.list import houseav_list
+from .houseAVCompanies.form import houseav_form
+from .houseAVCompanies.details import houseav_details
