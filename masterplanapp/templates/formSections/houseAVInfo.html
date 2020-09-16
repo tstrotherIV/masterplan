@@ -1,0 +1,32 @@
+<div class="card-body">
+  {% if houseav.id is not None %}
+      <form action="{% url 'masterplanapp:houseav' houseav.id %}" method="post">
+  {% else %}
+      <form action="{% url 'masterplanapp:houseavs' %}" method="post">
+  {% endif %}
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="name">Name: </label>
+        <input id="name" type="text" name="name" value="{{ houseav.name }}">
+    </div>
+    <div class="form-group">
+        <label for="contact_name">Contact Name: </label>
+        <input id="contact_name" type="text" name="contact_name" value="{{ houseav.contact_name }}">
+    </div>
+    <div class="form-group">
+        <label for="contact_email">Contact Email: </label>
+        <input id="contact_email" type="text" name="contact_email" value="{{ houseav.contact_email }}">
+    </div>
+    <div class="form-group">
+        <label for="contact_phone">Contact Phone Number: </label>
+        <input id="contact_phone" type="text" name="contact_phone" value="{{ houseav.contact_phone }}">
+    </div>
+      {% if houseav.id is not None %}
+          <input type="hidden" name="actual_method" value="PUT">
+          <button class="btn btn-link btn-block text-left collapsed save-and-next" type="submit" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Save Details</button>
+      {% else %}
+      <button class="btn btn-link btn-block text-left collapsed save-and-next" type="submit" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Save Details</button>
+      {% endif %}
+
+  </form>
+  </div>

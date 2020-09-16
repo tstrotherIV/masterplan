@@ -1,0 +1,22 @@
+{% extends 'shared/base.html' %} {% block content %}
+<h1>Clients</h1>
+
+<section class="clientList">
+{% for client in all_clients %}
+  <div class="card client-width">
+    <div class="card-body">
+      <h5 class="card-title">Client: {{ client.name }}</h5>
+      <div>Phone Number: {{ client.company_phone_number }}</div>
+      <div>Address: {{ client.address}},
+        {{client.city}} 
+        {{ client.state }} 
+        {{client.zipcode }}
+      </div>
+      <div>Contact:  {{ client.contact_first_name }} {{ client.contact_last_name }}</div>
+      <div>Contact Phone Number: {{client.contact_phone_number }}</div>
+      <div>Contact Email: {{ client.contact_email }}</div>
+    </div>
+  </div>
+{% endfor %}
+</section>
+{% endblock %}

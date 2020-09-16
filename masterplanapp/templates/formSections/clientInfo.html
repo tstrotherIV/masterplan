@@ -1,0 +1,58 @@
+<div class="card-body">
+  {% if client.id is not None %}
+      <form action="{% url 'masterplanapp:client' client.id %}" method="post">
+  {% else %}
+      <form action="{% url 'masterplanapp:clients' %}" method="post">
+  {% endif %}
+      {% csrf_token %}
+      <div class="form-group">
+          <label for="name">Name: </label>
+          <input id="name" type="text" name="name" value="{{ client.name }}">
+      </div>
+      <div class="form-group">
+          <label for="address">Street Address: </label>
+          <input id="address" type="text" name="address" value="{{ client.address }}">
+      </div>
+      <div class="form-group">
+          <label for="city">City: </label>
+          <input id="city" type="text" name="city" value="{{ client.city }}">
+      </div>
+      <div class="form-group">
+          <label for="state">State: </label>
+          <input id="state" type="text" name="state" value="{{ client.state }}">
+      </div>
+      <div class="form-group">
+          <label for="zipcode">Zipcode: </label>
+          <input id="zipcode" type="text" name="zipcode" value="{{ client.zipcode }}">
+      </div>
+      <div class="form-group">
+          <label for="company_phone_number">Company Phone Number: </label>
+          <input id="company_phone_number" type="text" name="company_phone_number" value="{{ client.company_phone_number }}">
+      </div>
+      <div class="form-group">
+          <label for="contact_first_name">Contact First Name: </label>
+          <input id="contact_first_name" type="text" name="contact_first_name" value="{{ client.contact_first_name }}">
+      </div>
+      <div class="form-group">
+          <label for="contact_last_name">Contact Last Name: </label>
+          <input id="contact_last_name" type="text" name="contact_last_name" value="{{ client.contact_last_name }}">
+      </div>
+      <div class="form-group">
+          <label for="contact_phone_number">Contact Phone Number: </label>
+          <input id="contact_phone_number" type="text" name="contact_phone_number" value="{{ client.contact_phone_number }}">
+      </div>
+      <div class="form-group">
+          <label for="contact_email">Contact Email: </label>
+          <input id="contact_email" type="text" name="contact_email" value="{{ client.contact_email }}">
+      </div>
+      
+
+      {% if client.id is not None %}
+          <input type="hidden" name="actual_method" value="PUT">
+          <button class="btn btn-link btn-block text-left collapsed save-and-next" type="submit" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Save Details</button>
+      {% else %}
+      <button class="btn btn-link btn-block text-left collapsed save-and-next" type="submit" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Save Details</button>
+      {% endif %}
+
+  </form>
+  </div>
