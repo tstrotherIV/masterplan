@@ -35,11 +35,11 @@
       </div>
       <div class="form-group">
           <label for="event_start_date">Event Start Date: </label>
-          <input id="event_start_date" type="text" name="event_start_date" value="{{ project.event_start_date }}">
+          <input id="event_start_date" type="date" name="event_start_date" value="{{ project.event_start_date }}">
       </div>
       <div class="form-group">
           <label for="event_end_date">Event End Date: </label>
-          <input id="event_end_date" type="text" name="event_end_date" value="{{ project.event_end_date }}">
+          <input id="event_end_date" type="date" name="event_end_date" value="{{ project.event_end_date }}">
       </div>
       <div class="form-group">
           <label for="load_in_time">Load In Time: </label>
@@ -52,7 +52,7 @@
 
       {% if project.id is not None %}
           <input type="hidden" name="actual_method" value="PUT">
-          <button class="btn btn-link btn-block text-left collapsed save-and-next" type="submit" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Save Details</button>
+          <button class="btn btn-link btn-block text-left collapsed save-and-next" type="submit" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" value="Update">Update Details</button>
       {% else %}
       <button class="btn btn-link btn-block text-left collapsed save-and-next" type="submit" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Save Details</button>
       {% endif %}

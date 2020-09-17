@@ -11,7 +11,7 @@ def houseav_details(request, houseav_id):
     if request.method == 'GET':
         houseav = HouseAV.objects.get(pk=houseav_id)
 
-        template = 'houseavs/detail.html'
+        template = 'projects/detail.html'
         context = {
             'houseav': houseav
         }
