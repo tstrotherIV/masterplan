@@ -5,7 +5,6 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from masterplanapp.models import Project, Client
 
-
 @login_required
 def client_details(request, client_id):
     if request.method == 'GET':
@@ -15,20 +14,18 @@ def client_details(request, client_id):
         context = {
             'client': client
         }
-
         return render(request, template, context)
 
 
     if request.method == 'POST':
         form_data = request.POST
 
-        # Check if this POST is for editing a project
         if (
             "actual_method" in form_data
             and form_data["actual_method"] == "PUT"
         ):
 
-            client_to_update = Project.objects.get(pk=client_id)
+            client_to_update = Client.objects.get(pk=client_id)
 
             client_to_update.name = form_data['name']
             client_to_update.address = form_data['address']

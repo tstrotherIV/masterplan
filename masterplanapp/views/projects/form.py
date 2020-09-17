@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from masterplanapp.models import Project, Client, Venue, HouseAV
 
@@ -65,13 +65,6 @@ def project_form(request):
             houseAV_id = houseav.id,
             
           )
-    
-    if request.method == "GET":
-      project = Project.objects.latest('id')
-      template_name = 'projects/form.html'
-      
-      context = {
-        'project': project
-      }
-      
-      return render(request, template_name, context)
+  
+    project = Project.objects.latest('id')  
+    return redirect(f'/form/{project.id}')

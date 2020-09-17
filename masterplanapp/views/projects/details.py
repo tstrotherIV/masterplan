@@ -3,19 +3,21 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from masterplanapp.models import Project
+from masterplanapp.models import Project, Client
+from ..clients.details import client_details
 
 
 @login_required
 def project_details(request, project_id):
     if request.method == 'GET':
         project = Project.objects.get(pk=project_id)
+        
 
         template = 'projects/detail.html'
         context = {
             'project': project
         }
-
+        
         return render(request, template, context)
 
 
@@ -42,9 +44,9 @@ def project_details(request, project_id):
             project_to_update.load_out_time = form_data["load_out_time"]
 
             project_to_update.save()
-
+            
             return HttpResponse(project_id)
-
+        
 
     if request.method == 'POST':
         form_data = request.POST
