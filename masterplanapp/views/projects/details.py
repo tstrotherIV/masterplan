@@ -52,11 +52,41 @@ def project_details(request, project_id):
         form_data = request.POST
         if (
             "actual_method" in form_data
-            and form_data["actual_method"] == "DELETE"
+            and form_data["actual_method"] == "ARCHIVE"
             ):
 
-                project_to_burn = Project.objects.get(pk=project_id)
-                project_to_burn.delete()
+                project_to_archive = Project.objects.get(pk=project_id)
+                project_to_archive.deleted = True
+                
+                project_to_archive.save()
+
+
+                return redirect(reverse('masterplanapp:projects'))
+            
+    if request.method == 'POST':
+        form_data = request.POST
+        if (
+            "actual_method" in form_data
+            and form_data["actual_method"] == "RESTORE"
+            ):
+
+                project_to_restore = Project.objects.get(pk=project_id)
+                project_to_restore.deleted = False
+                
+                project_to_restore.save()
+
+
+                return redirect(reverse('masterplanapp:projectsArchives'))
+            
+    if request.method == 'POST':
+        form_data = request.POST
+        if (
+            "actual_method" in form_data
+            and form_data["actual_method"] == "NUKE"
+            ):
+
+                project_to_delete = Project.objects.get(pk=project_id)
+                project_to_delete.delete()
 
 
                 return redirect(reverse('masterplanapp:projects'))

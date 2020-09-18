@@ -12,6 +12,7 @@ urlpatterns = [
     path('accounts/logout/', logout_user, name='logout'),
     path('', home, name='home'),
     path('projects/', project_list, name='projects'),
+    path('projectsArchives/', project_archive_list, name='projectsArchives'),
     path('projects/form/', project_form, name='project_form'),
     path('projects/<int:project_id>/', project_details, name='project'),
     path('form/<int:project_id>', project_details, name='project_details'),
