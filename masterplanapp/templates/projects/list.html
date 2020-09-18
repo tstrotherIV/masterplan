@@ -18,6 +18,16 @@
       <div>Load In Time: {{project.load_in_time }}</div>
       <div>Load Out Time: {{ project.load_out_time }}</div>
     </div>
+    
+    <form action="{% url 'masterplanapp:project_details' project.id %}" method="GET">
+      {% csrf_token %}
+      <button class="btn btn-primary">Edit</button>
+    </form>
+    <form action="{% url 'masterplanapp:project' project.id %}" method="POST">
+      {% csrf_token %}
+      <input type="hidden" name="actual_method" value="DELETE">
+      <button class="btn btn-danger">Delete</button>
+    </form>
   </div>
 {% endfor %}
 </section>
