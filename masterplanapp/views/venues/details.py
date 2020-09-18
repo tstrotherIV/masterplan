@@ -11,7 +11,7 @@ def venue_details(request, venue_id):
     if request.method == 'GET':
         venue = Venue.objects.get(pk=venue_id)
 
-        template = 'venues/detail.html'
+        template = 'projects/detail.html'
         context = {
             'venue': venue
         }
@@ -30,15 +30,14 @@ def venue_details(request, venue_id):
             venue_to_update = Venue.objects.get(pk=venue_id)
 
             venue_to_update.name = form_data['name']
-            venue_to_update.street_address = form_data['address']
+            venue_to_update.street_address = form_data['street_address']
             venue_to_update.city = form_data['city']
             venue_to_update.state = form_data['state']
             venue_to_update.zipcode = form_data['zipcode']
             venue_to_update.contact_name = form_data["contact_name"]
             venue_to_update.contact_email = form_data["contact_email"]
             venue_to_update.contact_phone = form_data["contact_phone"]
-            venue_to_update.onsite_parking = form_data["onsite_parking"]
-            venue_to_update.onsite_parking = form_data["onsite_parking"]
+            venue_to_update.onsite_parking = form_data["onsite_parking_address"]
             venue_to_update.semi_parking = form_data["semi_parking"]
             venue_to_update.loading_dock = form_data["loading_dock"]
             venue_to_update.venue_phone = form_data["venue_phone"]

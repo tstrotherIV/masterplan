@@ -156,10 +156,33 @@
         // wait for the DOM to be loaded 
         $(document).ready(function() { 
             $('#projectForm').ajaxForm(function(responseText, statusText, xhr, $form) { 
-              console.log("status test", xhr)
+              
             }); 
         }); 
     </script> 
-    <!-- <script src="{% static 'scripts/formHandler.js' %}" type="text/javascript"></script> -->
+    <script> 
+        // wait for the DOM to be loaded 
+        $(document).ready(function() { 
+            $('#clientForm').ajaxForm(function(responseText, statusText, xhr, $form) { 
+              
+            }); 
+        }); 
+    </script> 
+    <script> 
+        // wait for the DOM to be loaded 
+        $(document).ready(function() { 
+            $('#venueForm').ajaxForm(function(responseText, statusText, xhr, $form) { 
+              
+            }); 
+        }); 
+    </script> 
+    <script> 
+        // wait for the DOM to be loaded 
+        $(document).ready(function() { 
+            $('#houseavForm').ajaxForm(function(responseText, statusText, xhr, $form) { 
+              
+            }); 
+        }); 
+    </script> 
   </body>
 </html>
