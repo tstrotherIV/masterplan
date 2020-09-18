@@ -3,6 +3,7 @@ from .auth.login import login
 from .auth.logout import logout_user
 from .auth.register import register_user
 from .projects.list import project_list
+from .projects.list import project_archive_list
 from .projects.form import project_form
 from .projects.details import project_details
 from .clients.form import client_form

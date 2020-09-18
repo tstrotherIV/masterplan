@@ -1,5 +1,5 @@
 {% extends 'shared/base.html' %} {% block content %}
-<h1>Projects</h1>
+<h1>Archived Projects</h1>
 
 <section class="projectList">
 {% for project in all_projects %}
@@ -23,11 +23,16 @@
     
     <form action="{% url 'masterplanapp:project_details' project.id %}" method="GET">
       {% csrf_token %}
-      <button class="btn btn-primary">Edit</button>
+      <button class="btn btn-primary">See Details</button>
     </form>
     <form action="{% url 'masterplanapp:project' project.id %}" method="POST">
       {% csrf_token %}
-      <input type="hidden" name="actual_method" value="ARCHIVE">
+      <input type="hidden" name="actual_method" value="RESTORE">
+      <button class="btn btn-danger">Restore</button>
+    </form>
+    <form action="{% url 'masterplanapp:project' project.id %}" method="POST">
+      {% csrf_token %}
+      <input type="hidden" name="actual_method" value="NUKE">
       <button class="btn btn-danger">Delete</button>
     </form>
   </div>
