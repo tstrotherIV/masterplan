@@ -1,8 +1,8 @@
 <div class="card-body">
-  {% if project.id is not None %}
-      <form action="{% url 'masterplanapp:venue' project.venue.id %}" method="post">
+  {% if project.venue.id is not None %}
+      <form id="venueForm" action="{% url 'masterplanapp:venue' project.venue.id %}" method="post">
   {% else %}
-      <form action="{% url 'masterplanapp:venues' %}" method="post">
+      <form id="venueForm" action="{% url 'masterplanapp:venues' %}" method="post">
   {% endif %}
       {% csrf_token %}
       <div class="form-group">
@@ -47,18 +47,18 @@
       </div>
       <div class="form-group">
           <label for="semi_parking">Semi Parking Address: </label>
-          <input id="semi_parking" type="text" name="load_in_tisemi_parkingme" value="{{ project.venue.semi_parking }}">
+          <input id="semi_parking" type="text" name="semi_parking" value="{{ project.venue.semi_parking }}">
       </div>
       <div class="form-group">
           <label for="loading_dock">How many Loading Docks? Dock Height?: </label>
           <input id="loading_dock" type="text" name="loading_dock" value="{{ project.venue.loading_dock }}">
       </div>
 
-      {% if venue.id is not None %}
+      {% if project.venue.id is not None %}
           <input type="hidden" name="actual_method" value="PUT">
-          <button class="btn btn-link btn-block text-left collapsed save-and-next" type="submit" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Update Details</button>
+          <button class="btn btn-link btn-block text-left collapsed" type="submit" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" value="Update">Update Details</button>
       {% else %}
-      <button class="btn btn-link btn-block text-left collapsed save-and-next" type="submit" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Save Details</button>
+      <button class="btn btn-link btn-block text-left collapsed" type="submit" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Save Details</button>
       {% endif %}
 
   </form>
