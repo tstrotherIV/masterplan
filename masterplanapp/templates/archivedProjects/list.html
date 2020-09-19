@@ -2,40 +2,64 @@
 <h1>Archived Projects</h1>
 
 <section class="projectList">
-{% for project in all_projects %}
+  {% for project in all_projects %}
   <div class="card project-width">
     <div class="card-body">
       <h4 class="card-title">Project Title: {{ project.name }}</h4>
       <div class="card-title">Client: {{ project.client.name }}</div>
 
-      <h6 class="card-subtitle mb-2 text-muted">Description: {{ project.description }}</h6>
-      <div class="card-subtitle mb-2 text-muted">Venue: {{ project.location_name}}</div>
-      <div class="card-subtitle mb-2 text-muted">Address: {{ project.location_address}},
-        {{project.location_city}} 
-        {{ project.location_state }} 
-        {{project.location_zipcode }}
+      <h6 class="card-subtitle mb-2 text-muted">
+        Description: {{ project.description }}
+      </h6>
+      <div class="card-subtitle mb-2 text-muted">
+        Venue: {{ project.location_name}}
       </div>
-      <div class="card-subtitle mb-2 text-muted">Start Date: {{ project.event_start_date }}</div>
-      <div class="card-subtitle mb-2 text-muted">End Date: {{ project.event_end_date }}</div>
-      <div class="card-subtitle mb-2 text-muted">Load In Time: {{project.load_in_time }}</div>
-      <div class="card-subtitle mb-2 text-muted">Load Out Time: {{ project.load_out_time }}</div>
+      <div class="card-subtitle mb-2 text-muted">
+        Address: {{ project.location_address}}, {{project.location_city}} {{
+        project.location_state }} {{project.location_zipcode }}
+      </div>
+      <div class="card-subtitle mb-2 text-muted">
+        Start Date: {{ project.event_start_date }}
+      </div>
+      <div class="card-subtitle mb-2 text-muted">
+        End Date: {{ project.event_end_date }}
+      </div>
+      <div class="card-subtitle mb-2 text-muted">
+        Load In Time: {{project.load_in_time }}
+      </div>
+      <div class="card-subtitle mb-2 text-muted">
+        Load Out Time: {{ project.load_out_time }}
+      </div>
     </div>
-    
-    <form action="{% url 'masterplanapp:project_details' project.id %}" method="GET">
-      {% csrf_token %}
-      <button class="btn btn-primary">See Details</button>
-    </form>
-    <form action="{% url 'masterplanapp:project' project.id %}" method="POST">
-      {% csrf_token %}
-      <input type="hidden" name="actual_method" value="RESTORE">
-      <button class="btn btn-danger">Restore</button>
-    </form>
-    <form action="{% url 'masterplanapp:project' project.id %}" method="POST">
-      {% csrf_token %}
-      <input type="hidden" name="actual_method" value="NUKE">
-      <button class="btn btn-danger">Delete</button>
-    </form>
+
+    <div class="container mx-0">
+      <div class="d-flex justify-content-start">
+        <form
+          action="{% url 'masterplanapp:project_details' project.id %}"
+          method="GET"
+        >
+          {% csrf_token %}
+          <button class="btn btn-primary m-2">See Details</button>
+        </form>
+        <form
+          action="{% url 'masterplanapp:project' project.id %}"
+          method="POST"
+        >
+          {% csrf_token %}
+          <input type="hidden" name="actual_method" value="NUKE" />
+          <button class="btn btn-danger m-2">Delete</button>
+        </form>
+        <form
+          action="{% url 'masterplanapp:project' project.id %}"
+          method="POST"
+        >
+          {% csrf_token %}
+          <input type="hidden" name="actual_method" value="RESTORE" />
+          <button class="btn btn-secondary m-2">Restore</button>
+        </form>
+      </div>
+    </div>
   </div>
-{% endfor %}
+  {% endfor %}
 </section>
 {% endblock %}

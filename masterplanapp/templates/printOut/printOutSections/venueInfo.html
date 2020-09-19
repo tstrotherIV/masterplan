@@ -1,0 +1,14 @@
+<div class="card-body">
+    <h4>Venue Info</h4>
+      <div>Venue Name: {{ project.venue.name }}</div>
+      <div>Venue Phone Number: {{ project.venue.venue_phone }}</div>
+      <div>Venue Address: {{ project.venue.street_address }}, {{ project.venue.city }} {{ project.venue.state }} {{ project.venue.zipcode }}</div>
+      <div>Venue Contact Name: {{ project.venue.contact_name }}</div>
+      {% if request.user.is_authenticated %}
+      <div>Contact Email: {{ project.venue.contact_email }}</div>
+      <div>Contact Phone Number: {{ project.venue.contact_phone }}</div>
+      {% endif %}
+      <div>Crew Onsite Parking Location: {{ project.venue.onsite_parking_address }}</div>
+      <div>Semi Parking Lot: {{ project.venue.semi_parking }}</div>
+      <div>Venue Loading Dock info: {{ project.venue.loading_dock }}</div>
+  </div>

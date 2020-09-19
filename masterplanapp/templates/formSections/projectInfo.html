@@ -61,8 +61,8 @@
           <label for="priority">Is this Job a priority? </label>
           <select id="priority" name="priority">
             <option hidden value="">Select Option</option>
-            <option value="0" {% if project.confirmed == 0 %} selected {% endif %}> No </option>
-            <option value="1" {% if project.confirmed == 1 %} selected {% endif %}> Yes </option>
+            <option value="0" {% if project.priority == 0 %} selected {% endif %}> No </option>
+            <option value="1" {% if project.priority == 1 %} selected {% endif %}> Yes </option>
           </select>
       </div>
       <div class="form-group">

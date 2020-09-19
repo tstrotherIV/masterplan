@@ -15,6 +15,7 @@ urlpatterns = [
     path('projectsArchives/', project_archive_list, name='projectsArchives'),
     path('projectsPriority/', project_by_priority, name='projectsPriority'),
     path('projectsConfirmed/', project_by_confirmed, name='projectsConfirmed'),
+    path('projectPrintOut/<int:project_id>/', project_print_out, name='projectPrintOut'),
     path('projectsCompleted/', project_by_completed, name='projectsCompleted'),
     path('projects/form/', project_form, name='project_form'),
     path('projects/<int:project_id>/', project_details, name='project'),
