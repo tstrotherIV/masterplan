@@ -1,6 +1,15 @@
 {% extends 'shared/base.html' %} {% block content %}
 <h1>Projects</h1>
 
+<h4>Filters</h4>
+<div class="filterButtons">
+<a class="btn btn-danger" type="button" href="{% url 'masterplanapp:projectsPriority'%}">Filter By Priority</a>
+<br>
+<a class="btn btn-danger" type="button" href="{% url 'masterplanapp:projectsCompleted'%}">Filter By Completed</a>
+<br>
+<a class="btn btn-danger" type="button" href="{% url 'masterplanapp:projectsConfirmed'%}">Filter By Confirmed</a>
+</div>
+
 <section class="projectList">
 {% for project in all_projects %}
   <div class="card project-width">
