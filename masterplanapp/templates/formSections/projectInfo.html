@@ -14,32 +14,32 @@
           <input id="description" type="text" name="description" value="{{ project.description }}">
       </div>
       <div class="form-group">
-          <label for="location_name">Location Name: </label>
+          <label for="location_name">Name of the Venue or Hotel: </label>
           <input id="location_name" type="text" name="location_name" value="{{ project.location_name }}">
       </div>
       <div class="form-group">
-          <label for="location_address">Location_Address: </label>
+          <label for="location_address">Venue Street Address: </label>
           <input id="location_address" type="text" name="location_address" value="{{ project.location_address }}">
       </div>
       <div class="form-group">
-          <label for="location_city">Location City: </label>
+          <label for="location_city">City: </label>
           <input id="location_city" type="text" name="location_city" value="{{ project.location_city }}">
       </div>
       <div class="form-group">
-          <label for="location_state">Location State: </label>
+          <label for="location_state">State: </label>
           <input id="location_state" type="text" name="location_state" value="{{ project.location_state }}">
       </div>
       <div class="form-group">
-          <label for="location_zipcode">Location Zipcode: </label>
+          <label for="location_zipcode">Zipcode: </label>
           <input id="location_state" type="text" name="location_zipcode" value="{{ project.location_zipcode }}">
       </div>
       <div class="form-group">
           <label for="event_start_date">Event Start Date: </label>
-          <input id="event_start_date" type="date" name="event_start_date" value="{{ project.event_start_date }}">
+          <input id="event_start_date" type="date" name="event_start_date" value="{{ project.event_start_date|date:'Y-m-d' }}">
       </div>
       <div class="form-group">
           <label for="event_end_date">Event End Date: </label>
-          <input id="event_end_date" type="date" name="event_end_date" value="{{ project.event_end_date }}">
+          <input id="event_end_date" type="date" name="event_end_date" value="{{ project.event_end_date|date:'Y-m-d' }}">
       </div>
       <div class="form-group">
           <label for="load_in_time">Load In Time: </label>
@@ -48,6 +48,30 @@
       <div class="form-group">
           <label for="load_out_time">Load Out Time: </label>
           <input id="load_out_time" type="text" name="load_out_time" value="{{ project.load_out_time }}">
+      </div>
+      <div class="form-group">
+          <label for="confirmed">Job Confirmed? </label>
+          <select id="confirmed" name="confirmed">
+              <option hidden value="">Select Option</option>
+              <option value="False" {% if project.confirmed == 0 %} selected {% endif %}> No </option>
+              <option value="True" {% if project.confirmed == 1 %} selected {% endif %}> Yes </option>
+          </select>
+      </div>
+      <div class="form-group">
+          <label for="priority">Is this Job a priority? </label>
+          <select id="priority" name="priority">
+            <option hidden value="">Select Option</option>
+            <option value="0" {% if project.confirmed == 0 %} selected {% endif %}> No </option>
+            <option value="1" {% if project.confirmed == 1 %} selected {% endif %}> Yes </option>
+          </select>
+      </div>
+      <div class="form-group">
+          <label for="completed">Job Completed? </label>
+          <select id="completed" name="completed">
+            <option hidden value="">Select Option</option>
+            <option value="0" {% if project.completed == 0 %} selected {% endif %}> No </option>
+            <option value="1" {% if project.completed == 1 %} selected {% endif %}> Yes </option>
+          </select>
       </div>
 
       {% if project.id is not None %}
