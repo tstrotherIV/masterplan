@@ -6,6 +6,7 @@ from .projects.list import project_list
 from .projects.list import project_archive_list
 from .projects.form import project_form
 from .projects.details import project_details
+from .projects.archiveMethods import archived_project_details
 from .clients.form import client_form
 from .clients.list import client_list
 from .clients.details import client_details
