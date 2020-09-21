@@ -12,7 +12,7 @@ def archived_project_details(request, project_id):
     if request.method == 'GET':
         project = Project.objects.get(pk=project_id)
         
-
+        
         template = 'projects/detail.html'
         context = {
             'project': project

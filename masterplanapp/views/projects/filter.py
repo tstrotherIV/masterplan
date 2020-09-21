@@ -38,3 +38,14 @@ def project_by_confirmed(request):
         }
         
         return render(request, template_name, context)
+      
+def project_by_date(request):
+      if request.method == "GET":
+        project_list = Project.objects.filter(deleted=False).order_by('event_start_date')
+        template_name = useThisTemplate
+        
+        context = {
+          'all_projects': project_list
+        }
+        
+        return render(request, template_name, context)

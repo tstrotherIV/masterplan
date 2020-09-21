@@ -3,6 +3,7 @@
     "model": "masterplanapp.project",
     "pk": 1,
     "fields": {
+      "user_id": 2,
       "name": "Dollar General Annual Conference 2021",
       "description": "Annual conference for Employees from the Southwest region. 2 General sessions and 15 Breakout rooms",
       "location_name": "Disney's Coronado Springs Resort Convention Center",
@@ -28,6 +29,7 @@
     "model": "masterplanapp.project",
     "pk": 2,
     "fields": {
+      "user_id": 2,
       "name": "Goodyear Mid-Year Conference 2022",
       "description": "Mid-Year conference for top level execs. 1 General Session and 3 breakout rooms",
       "location_name": "Disney's Yacht Club Convention Center",
@@ -53,6 +55,7 @@
     "model": "masterplanapp.project",
     "pk": 3,
     "fields": {
+      "user_id": 2,
       "name": "Sams Club Annual Conference 2019",
       "description": "Annual Conference for Employees to present new products, future planning, and location announcements",
       "location_name": "Tampa Convention Center",

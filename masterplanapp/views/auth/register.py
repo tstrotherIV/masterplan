@@ -15,7 +15,6 @@ def register_user(request):
     # For handling when user submits the form data
     if request.method == "POST":
 
-        # create a new user using django's built in craziness. create a user is a method in django.
         User.objects.create_user(
             username=request.POST['username'],
             email=request.POST['email'],
@@ -23,6 +22,7 @@ def register_user(request):
             first_name=request.POST['first_name'],
             last_name=request.POST['last_name']
         )
+    
 
         authenticated_user = authenticate(
             username=request.POST['username'], password=request.POST['password'])
