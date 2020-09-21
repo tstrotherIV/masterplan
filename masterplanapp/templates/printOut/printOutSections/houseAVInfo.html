@@ -1,0 +1,9 @@
+<div class="card-body">
+    <h4>House AV Info</h4>
+    <div>In House AV Company: {{ project.houseAV.name }}</div>
+    {% if request.user.is_authenticated %}
+    <div>Contact Name: {{ project.houseAV.contact_name }}</div>
+    <div>Contact Email: {{ project.houseAV.contact_email }}</div>
+    <div>Contact Phone Number: {{ project.houseAV.contact_phone }}</div>
+    {% endif %}
+  </div>

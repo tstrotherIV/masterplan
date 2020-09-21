@@ -1,0 +1,11 @@
+<div class="card-body">
+  <h4>Client Info</h4>
+  <div>Client Name: {{ project.client.name }}</div>
+  <div>Client Office Address: {{ project.client.address }}, {{ project.client.city }} {{ project.client.state }} {{ project.client.zipcode }}</div>
+  <div>Company Phone Number: {{ project.client.company_phone_number }}</div>
+  {% if request.user.is_authenticated %}
+  <div>Direct Contact Name: {{ project.client.contact_first_name }} {{ project.client.contact_last_name }}</div>
+  <div>Contact Phone Number: {{ project.client.contact_phone_number }}</div>
+  <div>Contact Email Address: {{ project.client.contact_email }}</div>
+  {% endif %}
+</div>

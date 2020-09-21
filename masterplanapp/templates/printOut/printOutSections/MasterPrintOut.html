@@ -1,0 +1,25 @@
+{% block content %}
+<button onClick="javascript:window.print()">Print</button>
+<h1>Project Print Out</h1>
+
+
+<!-- Form Section for main project details imported from formSections -->
+{% include "printOut/printOutSections/projectInfo.html" %}
+
+
+
+<!-- Form Section for client details imported from formSections -->
+{% include "printOut/printOutSections/clientInfo.html" %}
+            
+            
+              
+<!-- Form Section for venue details imported from formSections -->
+{% include "printOut/printOutSections/venueInfo.html" %}
+
+            
+              
+<!-- Form Section for venue details imported from formSections -->
+{% include "printOut/printOutSections/houseAVInfo.html" %}
+
+           
+{% endblock %}
