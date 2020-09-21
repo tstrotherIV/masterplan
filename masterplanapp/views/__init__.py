@@ -10,6 +10,7 @@ from .projects.archiveMethods import archived_project_details
 from .projects.filter import project_by_priority
 from .projects.filter import project_by_completed
 from .projects.filter import project_by_confirmed
+from .projects.filter import project_by_date
 from .projects.printOut import project_print_out
 from .clients.form import client_form
 from .clients.list import client_list

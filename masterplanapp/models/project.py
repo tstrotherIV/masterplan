@@ -3,10 +3,11 @@ from .client import Client
 from .union import Union
 from .houseAV import HouseAV
 from .venue import Venue
-
+from django.contrib.auth.models import User
 
 class Project(models.Model):
 
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=1000, default=None, blank=True, null=True)
     location_name = models.CharField(max_length=100, default=None, blank=True, null=True)

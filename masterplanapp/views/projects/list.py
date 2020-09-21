@@ -4,7 +4,7 @@ from masterplanapp.models import Client, HouseAV, Union, Venue, Project
 
 def project_list(request):
     if request.method == "GET":
-      project_list = Project.objects.filter(deleted=False)
+      project_list = Project.objects.filter(deleted=False, user_id=request.user)
       template_name = 'projects/list.html'
       
       context = {
@@ -34,7 +34,7 @@ def project_list(request):
       
 def project_archive_list(request):
     if request.method == "GET":
-      project_list = Project.objects.filter(deleted=True)
+      project_list = Project.objects.filter(deleted=True, user_id=request.user)
       template_name = 'archivedProjects/list.html'
       
       context = {
