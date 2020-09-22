@@ -7,47 +7,47 @@
       {% csrf_token %}
       <div class="form-group">
           <label for="name">Name: </label>
-          <input id="name" type="text" name="name" value={{ project.name }}>
+          <input class="form-control" id="name" type="text" name="name" value={{ project.name }}>
       </div>
       <div class="form-group">
           <label for="description">Description: </label>
-          <input id="description" type="text" name="description" value="{{ project.description }}">
+          <input class="form-control" id="description" type="text" name="description" value="{{ project.description }}">
       </div>
       <div class="form-group">
           <label for="location_name">Name of the Venue or Hotel: </label>
-          <input id="location_name" type="text" name="location_name" value="{{ project.location_name }}">
+          <input class="form-control" id="location_name" type="text" name="location_name" value="{{ project.location_name }}">
       </div>
       <div class="form-group">
           <label for="location_address">Venue Street Address: </label>
-          <input id="location_address" type="text" name="location_address" value="{{ project.location_address }}">
+          <input class="form-control" id="location_address" type="text" name="location_address" value="{{ project.location_address }}">
       </div>
       <div class="form-group">
           <label for="location_city">City: </label>
-          <input id="location_city" type="text" name="location_city" value="{{ project.location_city }}">
+          <input class="form-control" id="location_city" type="text" name="location_city" value="{{ project.location_city }}">
       </div>
       <div class="form-group">
           <label for="location_state">State: </label>
-          <input id="location_state" type="text" name="location_state" value="{{ project.location_state }}">
+          <input class="form-control" id="location_state" type="text" name="location_state" value="{{ project.location_state }}">
       </div>
       <div class="form-group">
           <label for="location_zipcode">Zipcode: </label>
-          <input id="location_state" type="text" name="location_zipcode" value="{{ project.location_zipcode }}">
+          <input class="form-control" id="location_state" type="text" name="location_zipcode" value="{{ project.location_zipcode }}">
       </div>
       <div class="form-group">
           <label for="event_start_date">Event Start Date: </label>
-          <input id="event_start_date" type="date" name="event_start_date" value="{{ project.event_start_date|date:'Y-m-d' }}">
-      </div>
-      <div class="form-group">
-          <label for="event_end_date">Event End Date: </label>
-          <input id="event_end_date" type="date" name="event_end_date" value="{{ project.event_end_date|date:'Y-m-d' }}">
+          <input class="form-control" id="event_start_date" type="date" name="event_start_date" value="{{ project.event_start_date|date:'Y-m-d' }}">
       </div>
       <div class="form-group">
           <label for="load_in_time">Load In Time: </label>
-          <input id="load_in_time" type="text" name="load_in_time" value="{{ project.load_in_time }}">
+          <input class="form-control" id="load_in_time" type="time" name="load_in_time" value="{{ project.load_in_time }}">
+      </div>
+      <div class="form-group">
+          <label for="event_end_date">Event End Date: </label>
+          <input class="form-control" id="event_end_date" type="date" name="event_end_date" value="{{ project.event_end_date|date:'Y-m-d' }}">
       </div>
       <div class="form-group">
           <label for="load_out_time">Load Out Time: </label>
-          <input id="load_out_time" type="text" name="load_out_time" value="{{ project.load_out_time }}">
+          <input class="form-control" id="load_out_time" type="time" name="load_out_time" value="{{ project.load_out_time }}">
       </div>
       <div class="form-group">
           <label for="confirmed">Job Confirmed? </label>

@@ -93,6 +93,8 @@
         </ul>
         {% if request.user.is_authenticated %}
         <div class="genPad">Recent Projects</div>
+        {% block sidebar %}{% endblock %}
+
         {% endif %}
       </nav>
 

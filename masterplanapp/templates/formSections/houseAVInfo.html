@@ -7,19 +7,19 @@
       {% csrf_token %}
       <div class="form-group">
         <label for="name">Name: </label>
-        <input id="name" type="text" name="name" value="{{ project.houseAV.name }}">
+        <input class="form-control" id="name" type="text" name="name" value="{{ project.houseAV.name }}">
     </div>
     <div class="form-group">
         <label for="contact_name">Contact Name: </label>
-        <input id="contact_name" type="text" name="contact_name" value="{{ project.houseAV.contact_name }}">
+        <input class="form-control" id="contact_name" type="text" name="contact_name" value="{{ project.houseAV.contact_name }}">
     </div>
     <div class="form-group">
         <label for="contact_email">Contact Email: </label>
-        <input id="contact_email" type="text" name="contact_email" value="{{ project.houseAV.contact_email }}">
+        <input class="form-control" id="contact_email" type="text" name="contact_email" value="{{ project.houseAV.contact_email }}">
     </div>
     <div class="form-group">
         <label for="contact_phone">Contact Phone Number: </label>
-        <input id="contact_phone" type="text" name="contact_phone" value="{{ project.houseAV.contact_phone }}">
+        <input class="form-control" id="contact_phone" type="text" name="contact_phone" value="{{ project.houseAV.contact_phone }}">
     </div>
       {% if project.houseAV.id is not None %}
           <input type="hidden" name="actual_method" value="PUT">

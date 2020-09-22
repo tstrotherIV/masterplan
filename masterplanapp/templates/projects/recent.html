@@ -1,0 +1,15 @@
+{% extends 'shared/base.html' %} {% block sidebar %}
+
+<section class="projectList mt-2">
+  {% for project in all_projects %}
+  <div class="card project-width">
+    <div class="card-body m-4">
+      {% if project.priority == 1 %}
+      <div class="ribbon ribbon-top-right"><span>Priority</span></div>
+      {% endif %}
+      <h4 class="card-title">Project Title: {{ project.name }}</h4>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}

@@ -6,3 +6,5 @@ from .venue import Venue
 from .media import Media
 from .vendor import Vendor
 from .assignedVendors import AssignedVendor
+from .photo import Photo
+from .photoForm import PhotoForm
