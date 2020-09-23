@@ -5,53 +5,57 @@
       <form id="venueForm" action="{% url 'masterplanapp:venues' %}" method="post">
   {% endif %}
       {% csrf_token %}
+
+      <form method='get' action='#'>
+        <input type="submit" value="Same" name="Same"/>
+    </form>
       <div class="form-group">
           <label for="name">Name: </label>
-          <input id="name" type="text" name="name" value="{{ project.venue.name }}">
+          <input class="form-control" id="name" type="text" name="name" value="{{ project.venue.name }}">
       </div>
       <div class="form-group">
         <label for="venue_phone">Venue Phone Number: </label>
-        <input id="venue_phone" type="text" name="venue_phone" value="{{ project.venue.venue_phone }}">
+        <input class="form-control" id="venue_phone" type="text" name="venue_phone" value="{{ project.venue.venue_phone }}">
       </div>
       <div class="form-group">
           <label for="street_address">Stree Address: </label>
-          <input id="street_address" type="text" name="street_address" value="{{ project.venue.street_address }}">
+          <input class="form-control" id="street_address" type="text" name="street_address" value="{{ project.venue.street_address }}">
       </div>
       <div class="form-group">
           <label for="city">City: </label>
-          <input id="city" type="text" name="city" value="{{ project.venue.city }}">
+          <input class="form-control" id="city" type="text" name="city" value="{{ project.venue.city }}">
       </div>
       <div class="form-group">
           <label for="state">State: </label>
-          <input id="state" type="text" name="state" value="{{ project.venue.state }}">
+          <input class="form-control" id="state" type="text" name="state" value="{{ project.venue.state }}">
       </div>
       <div class="form-group">
           <label for="zipcode">Zipcode: </label>
-          <input id="zipcode" type="text" name="zipcode" value="{{ project.venue.zipcode }}">
+          <input class="form-control" id="zipcode" type="text" name="zipcode" value="{{ project.venue.zipcode }}">
       </div>
       <div class="form-group">
           <label for="contact_name">Contact Name: </label>
-          <input id="contact_name" type="text" name="contact_name" value="{{ project.venue.contact_name }}">
+          <input class="form-control" id="contact_name" type="text" name="contact_name" value="{{ project.venue.contact_name }}">
       </div>
       <div class="form-group">
           <label for="contact_email">Contact Email: </label>
-          <input id="contact_email" type="text" name="contact_email" value="{{ project.venue.contact_email }}">
+          <input class="form-control" id="contact_email" type="text" name="contact_email" value="{{ project.venue.contact_email }}">
       </div>
       <div class="form-group">
           <label for="contact_phone">Contact Phone Number: </label>
-          <input id="contact_phone" type="text" name="contact_phone" value="{{ project.venue.contact_phone }}">
+          <input class="form-control" id="contact_phone" type="text" name="contact_phone" value="{{ project.venue.contact_phone }}">
       </div>
       <div class="form-group">
           <label for="onsite_parking_address">Onsite Parking Address: </label>
-          <input id="onsite_parking_address" type="text" name="onsite_parking_address" value="{{ project.venue.onsite_parking_address }}">
+          <input class="form-control" id="onsite_parking_address" type="text" name="onsite_parking_address" value="{{ project.venue.onsite_parking_address }}">
       </div>
       <div class="form-group">
           <label for="semi_parking">Semi Parking Address: </label>
-          <input id="semi_parking" type="text" name="semi_parking" value="{{ project.venue.semi_parking }}">
+          <input class="form-control" id="semi_parking" type="text" name="semi_parking" value="{{ project.venue.semi_parking }}">
       </div>
       <div class="form-group">
           <label for="loading_dock">How many Loading Docks? Dock Height?: </label>
-          <input id="loading_dock" type="text" name="loading_dock" value="{{ project.venue.loading_dock }}">
+          <input class="form-control" id="loading_dock" type="text" name="loading_dock" value="{{ project.venue.loading_dock }}">
       </div>
 
       {% if project.venue.id is not None %}

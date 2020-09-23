@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'masterplanapp',
     'bootstrap4',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,5 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/projects/'
 
 LOGOUT_REDIRECT_URL = '/'
+
+TIME_INPUT_FORMATS = ('%I:%M %p',)

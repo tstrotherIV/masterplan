@@ -13,10 +13,11 @@ def project_list(request):
       
       return render(request, template_name, context)
   
+  
     elif request.method == 'POST':
         form_data = request.POST
         
-        new_project = Project.objects.create(
+        Project.objects.create(
             name = form_data['name'],
             description = form_data['description'],
             location_name = form_data['location_name'],
@@ -36,6 +37,17 @@ def project_archive_list(request):
     if request.method == "GET":
       project_list = Project.objects.filter(deleted=True, user_id=request.user)
       template_name = 'archivedProjects/list.html'
+      
+      context = {
+        'all_projects': project_list
+      }
+      
+      return render(request, template_name, context)
+    
+def recent_list(request):
+    if request.method == "GET":
+      project_list = Project.objects.filter(deleted=False, user_id=request.user)
+      template_name = 'projects/recent.html'
       
       context = {
         'all_projects': project_list

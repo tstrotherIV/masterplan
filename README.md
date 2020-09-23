@@ -1,16 +1,11 @@
 ## Steps to get your project started:
 
-* Clone down your team's repo and `cd` into it
+* Clone down the repo and `cd` into it
 
 * Create your OSX/Linux OS virtual environment in Terminal:
 
-  * `python -m venv workforceenv`
-  * `source ./workforceenv/bin/activate`
-
-* Or create your Windows virtual environment in Command Line:
-
-  * `python -m venv workforceenv`
-  * `source ./workforceenv/Scripts/activate`
+  * `python -m venv masterplanenv`
+  * `source ./masterplanenv/bin/activate`
 
 * Install the app's dependencies:
 
@@ -18,27 +13,22 @@
 
 * Build your database from the existing models:
 
-  * `python manage.py makemigrations hrapp`
+  * `python manage.py makemigrations masterplanapp`
   * `python manage.py migrate`
 
 * Create a superuser for your local version of the app:
 
   * `python manage.py createsuperuser`
 
-* Populate your database with initial data from fixtures files: (_NOTE: every time you run this it will remove existing data and repopulate the tables_)
+* Populate your database with initial data from fixtures files: (_NOTE: The order you add these fixtures is important_)
 
-  * `python manage.py loaddata computers`
-  * `python manage.py loaddata users`
+  * `python manage.py loaddata clients`
+  * `python manage.py loaddata houseAV`
+  * `python manage.py loaddata union`
+  * `python manage.py loaddata venue`
+  * `python manage.py loaddata projects`
 
-* Fire up your dev server and get to work!
+* Start your dev server!
 
   * `python manage.py runserver`
 
-
-## Official Bangazon LLC ERD
-
-Our team of database developers and administrators developed this ERD for you to reference when creating your models.
-
-https://dbdiagram.io/d/5eb4d41339d18f5553fedf9e
-
-Note that the column names do not conform to the Python community standards (PEP) for naming conventions. Make sure your models' properties use snake case.
