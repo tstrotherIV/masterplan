@@ -22,3 +22,4 @@ from .venues.details import venue_details
 from .houseAVCompanies.list import houseav_list
 from .houseAVCompanies.form import houseav_form
 from .houseAVCompanies.details import houseav_details
+from .medias.list import media_list
