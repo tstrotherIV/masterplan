@@ -4,6 +4,7 @@ from .auth.logout import logout_user
 from .auth.register import register_user
 from .projects.list import project_list
 from .projects.list import project_archive_list
+from .projects.list import recent_list
 from .projects.form import project_form
 from .projects.details import project_details
 from .projects.archiveMethods import archived_project_details

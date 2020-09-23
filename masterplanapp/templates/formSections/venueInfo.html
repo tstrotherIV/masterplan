@@ -5,6 +5,10 @@
       <form id="venueForm" action="{% url 'masterplanapp:venues' %}" method="post">
   {% endif %}
       {% csrf_token %}
+
+      <form method='get' action='#'>
+        <input type="submit" value="Same" name="Same"/>
+    </form>
       <div class="form-group">
           <label for="name">Name: </label>
           <input class="form-control" id="name" type="text" name="name" value="{{ project.venue.name }}">
