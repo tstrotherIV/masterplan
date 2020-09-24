@@ -3,6 +3,10 @@
 */
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
+.progress {
+  height: 30px;
+}
+
 .body {
   font-family: "Poppins", sans-serif;
   background-image: url("https://res.cloudinary.com/duo4xxmj8/image/upload/v1600950745/MasterPlan/MasterPlanLogo_dveiou.png"), url("https://res.cloudinary.com/duo4xxmj8/image/upload/c_scale,w_1920/v1599758747/MasterPlan/homebackground_l5tk5v.jpg");

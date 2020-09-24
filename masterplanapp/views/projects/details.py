@@ -13,10 +13,40 @@ from ..clients.list import client_list
 def project_details(request, project_id):
     if request.method == 'GET':
         project = Project.objects.get(pk=project_id)
+        progressbar = []
+        completed = []
+      
+        for attr, value in project.__dict__.items():
+            if value == '':
+                progressbar.append(attr)
+            else:
+                completed.append(attr)
+                
+        for attr, value in project.client.__dict__.items():
+            if value == '':
+                progressbar.append(attr)
+            
+                
+        for attr, value in project.venue.__dict__.items():
+            if value == '':
+                progressbar.append(attr)
+           
+                
+        for attr, value in project.houseAV.__dict__.items():
+            if value == '':
+                progressbar.append(attr)
+            
+        print(completed)
+        # total fields is 37
+        progressbar_value = int(len(progressbar))
+        finished = 37 - progressbar_value
+        percentage = int((finished/37)*100)
         
         template = 'projects/detail.html'
         context = {
-            'project': project
+            'project': project,
+            'progressbar_value': finished,
+            'percentage': percentage
         }
         
         return render(request, template, context)
