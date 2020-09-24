@@ -2,7 +2,11 @@
 
 ## MasterPlan
 
-MasterPlan is a hyper focused project management solution for Project and Production Managers in the corporate entertainment industry.
+`What:` `MasterPlan` is a focused project management solution for Project and Production Managers in the corporate entertainment industry.
+
+`Why:` As someone who has filled this position many times, I always found it daunting to use other Project Management systems because the templates were always very generic. This required me to create the same fields for every project I worked on, allowing for human error, and forgetting essential data. 
+
+`How:` Through referencing past events and my planning method, I compiled a list of particular fields that applied to every project. Using that list, I created a very industry specific solution for covering and gathering data for all critical aspects for planning a successful event. This ultimately helps save an immense amount of time and money as any missed details can cause significant delays while executing the event.
 
 ## Steps to get your project started:
 
