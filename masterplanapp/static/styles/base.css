@@ -5,9 +5,15 @@
 
 .body {
   font-family: "Poppins", sans-serif;
-  background-image: url("https://res.cloudinary.com/duo4xxmj8/image/upload/v1599758747/MasterPlan/homebackground_l5tk5v.jpg");
+  background-image: url("https://res.cloudinary.com/duo4xxmj8/image/upload/v1600950745/MasterPlan/MasterPlanLogo_dveiou.png"), url("https://res.cloudinary.com/duo4xxmj8/image/upload/c_scale,w_1920/v1599758747/MasterPlan/homebackground_l5tk5v.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: center;
+}
+
+.logo {
+  background-image: url("https://res.cloudinary.com/duo4xxmj8/image/upload/v1600950745/MasterPlan/MasterPlanLogo_dveiou.png");
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .whiteBgd {
@@ -246,7 +252,6 @@ a.article:hover {
   box-shadow: 5px 10px 10px #00000023;
 }
 
-
 @import url(https://fonts.googleapis.com/css?family=Lato:700);
 body {
   display: flex;
@@ -261,7 +266,7 @@ body {
   width: 90%;
   height: 400px;
   background: #fff;
-  box-shadow: 0 0 15px rgba(0,0,0,.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 /* common */
@@ -275,7 +280,7 @@ body {
 .ribbon::after {
   position: absolute;
   z-index: -1;
-  content: '';
+  content: "";
   display: block;
   border: 5px solid #2980b9;
 }
@@ -285,10 +290,10 @@ body {
   width: 225px;
   padding: 15px 0;
   background-color: #3498db;
-  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   color: #fff;
-  font: 700 18px/1 'Lato', sans-serif;
-  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  font: 700 18px/1 "Lato", sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   text-align: center;
 }
