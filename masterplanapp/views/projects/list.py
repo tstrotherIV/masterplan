@@ -5,10 +5,41 @@ from masterplanapp.models import Client, HouseAV, Union, Venue, Project
 def project_list(request):
     if request.method == "GET":
       project_list = Project.objects.filter(deleted=False, user_id=request.user)
-      template_name = 'projects/list.html'
+      progressbar = []
       
+      for project in project_list:
+        for attr, value in project.__dict__.items():
+            if value == '':
+                progressbar.append(value)
+            
+                
+        for attr, value in project.client.__dict__.items():
+            if value == '':
+                progressbar.append(value)
+            
+                
+        for attr, value in project.venue.__dict__.items():
+            if value == '':
+                progressbar.append(value)
+            
+                
+        for attr, value in project.houseAV.__dict__.items():
+            if value == '':
+                progressbar.append(value)
+            
+        
+        # total fields is 37
+        progressbar_value = int(len(progressbar))
+        finished = 37 - progressbar_value
+        print(finished)
+        percentage = int((finished/37)*100)
+      
+      
+      template_name = 'projects/list.html'     
       context = {
-        'all_projects': project_list
+        'all_projects': project_list,
+        'progressbar_value': finished,
+        'percentage': percentage
       }
       
       return render(request, template_name, context)
