@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from masterplanapp.models import Project
 
-useThisTemplate = 'projects/list.html'
+useThisTemplate = 'projects/filterlist.html'
 
 def project_by_priority(request):
       if request.method == "GET":
