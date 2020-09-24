@@ -32,7 +32,7 @@ def project_form(request):
     if request.method == "GET":
       houseav = HouseAV.objects.latest('id')
       
-    Venue.objects.create(
+    venue = Venue.objects.create(
             name = "",
             street_address = "",
             city = "",
@@ -46,8 +46,7 @@ def project_form(request):
             loading_dock = "",
             venue_phone = "",
           )
-    if request.method == "GET":
-      venue = Venue.objects.latest('id')
+   
     
     Project.objects.create(
             user = request.user,
