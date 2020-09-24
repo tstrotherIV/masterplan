@@ -1,3 +1,9 @@
+![site logo](https://res.cloudinary.com/duo4xxmj8/image/upload/v1600950745/MasterPlan/MasterPlanLogo_dveiou.png)
+
+## MasterPlan
+
+MasterPlan is a hyper focused project management solution for Project and Production Managers in the corporate entertainment industry.
+
 ## Steps to get your project started:
 
 * Clone down the repo and `cd` into it
