@@ -77,7 +77,7 @@
         >
           {% csrf_token %}
           <input type="hidden" name="actual_method" value="ARCHIVE" />
-          <button class="btn btn-danger m-2">Delete</button>
+          <button class="btn btn-danger m-2">{% if project.deleted is not None %} Archive {% else %} Delete {% endif %}</button>
         </form>
 
         <form
